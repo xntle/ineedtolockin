@@ -19,16 +19,18 @@ export default function TimerPage() {
 
   return (
     <>
-      <button
-        onClick={addNote}
-        className="px-4 py-2 bg-blue-500 text-white rounded-md"
-      >
-        Add Sticky Note
-      </button>
+    <div className="flex justify-center flex-col items-center mt-[-50px] h-screen">
       {notes.map((note) => (
         <Sticky key={note.id} id={note.id} onDelete={removeNote} />
       ))}
       <Pomodoro />
+      <button
+        onClick={addNote}
+        className="px-4 py-2 mt-4 bg-white shadow-md text-black rounded-2xl"
+      >
+        add sticky
+      </button>
+      </div>
     </>
   );
 }
